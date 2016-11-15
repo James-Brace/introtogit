@@ -1,16 +1,24 @@
 #include <stdio.h>
 int main()
 {
-    int n1, n2, sum;
+    int n1, n2, temp, sum;
     
     printf("Enter two integers: \n");
 
     scanf("%d %d", &n1, &n2);
 
+	if(n1>n2)
+	{
+		temp = n1;
+		n1 = n2;
+		n2 = temp;
+	}
+	
+	printf("Your numbers in increasing order are: %d, %d\n", n1,n2);
+	
     sum = n1 + n2;
     
     printf("%d + %d = %d\n", n1, n2, sum);
-	printf("%d\n", sum%2);
 	
 	if(sum%2==0)
 	{
